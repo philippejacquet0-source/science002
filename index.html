@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Space Invaders (Vanilla JS)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">👾 Space Invaders</div>
+      <div class="hud">
+        <div>Score: <span id="score">0</span></div>
+        <div>Vies: <span id="lives">3</span></div>
+        <div>Vague: <span id="wave">1</span></div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="canvasWrap">
+        <canvas id="game" width="720" height="540"></canvas>
+
+        <div class="overlay" id="overlay">
+          <div class="card">
+            <h1>Space Invaders</h1>
+            <p class="keys">
+              <b>PC</b> : ← → pour bouger, <b>Espace</b> pour tirer, <b>P</b> pause<br />
+              <b>Mobile</b> : boutons à l’écran
+            </p>
+            <button id="btnStart">Démarrer</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="help">
+        <h2>Commandes</h2>
+        <ul>
+          <li>Déplacement : ← → (ou A / D)</li>
+          <li>Tir : Espace</li>
+          <li>Pause : P</li>
+          <li>Redémarrer après Game Over : Entrée</li>
+        </ul>
+
+        <div class="touchControls" id="touchControls" aria-hidden="true">
+          <button class="touchBtn" id="btnLeft">◀</button>
+          <button class="touchBtn" id="btnFire">FIRE</button>
+          <button class="touchBtn" id="btnRight">▶</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
